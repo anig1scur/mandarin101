@@ -2,6 +2,15 @@ import { FC } from "react";
 
 import Map from "../assets/map.svg";
 
+const VowelsWithTone = {
+  a: ["ā", "á", "ǎ", "à"],
+  e: ["ē", "é", "ě", "è"],
+  i: ["ī", "í", "ǐ", "ì"],
+  o: ["ō", "ó", "ǒ", "ò"],
+  u: ["ū", "ú", "ǔ", "ù"],
+  ü: ["ǖ", "ǘ", "ǚ", "ǜ"],
+}
+
 const Syllabus: FC = () => {
 
   const syllabuses = [
@@ -47,7 +56,7 @@ const Syllabus: FC = () => {
     }
   ]
 
-  return <div className="flex flex-col items-start gap-4">
+  return <div className="flex flex-col items-start gap-2  lg:gap-5">
     {
       syllabuses.map((syllabus, index) => {
         return <div key={ index } className="flex flex-col items-start">
@@ -64,11 +73,11 @@ const Syllabus: FC = () => {
 
 export default function Home() {
   return <div className="home w-full">
-    <div className="flex flex-col items-start ml-32 w-fit gap-20">
+    <div className="flex flex-col items-start ml-8 lg:ml-48 w-fit gap-10 lg:gap-24">
       <h1 className="text-8xl text-white">MANDARIN 101</h1>
       <Syllabus />
     </div>
-    <img className="absolute -right-4 -top-5" src={ Map } />
+    <img className="scale-75 lg:scale-150 absolute top-20 -right-20 lg:right-20 lg:top-20" src={ Map } />
   </div>
 
 }
