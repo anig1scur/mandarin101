@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'JockeyOne';
+  src: local('JockeyOne'), url(../assets/fonts/JockeyOne-Regular.otf) format('opentype');
+}
+
+
+body {
+  overflow-x: hidden;
+}
